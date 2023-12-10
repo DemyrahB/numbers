@@ -22,29 +22,41 @@ class Numbers {
     }
     
     odds(n1) {
-      let data = ["1,2,3,3,5,9"]
+      let data = [1,2,3,3,5,9]
       const odds = data.filter((data) => data / 2 === 1);
       console.log(odds)
     }
     evens(n1) {
-      let data = ["1,2,3,3,5,9"]
+      let data = [1,2,3,3,5,9]
       const evens = data.filter((data) => data * 2);
       console.log(evens)
     }
-    sum() {
-      //return the sum of the numbers
+    sum(n1) {
+      let data = [1,2,3,3,5,9]
+      let sum = 0;
+      for (let i = 0; i < data.length; i++) {
+        sum += data[i];
+      }
+      console.log(sum)
     }
-    product() {
-      //return the product of the numbers
+    product(n1) {
+      let data = [1,2,3,3,5,9];
+      let product = 1;
+      for (let i = 0; i < data.length; i++) {
+        product *= data[i];
+      };
+      console.log(product);
     }
     greaterThan(target) {
-      //return the numbers greater than the target
+      let data = [1,2,3,3,5,9];
+      console.log(Math.max(...data));
     }
     howMany(target) {
-      //return the count of a given number
-    }
+      let data = [1,2,3,3,5,9]
+      let arr = data.filter(x => x === 3).length
+      console.log(arr)
+    } 
   }
-  
   //Prompt the user for a list of integers separated by commas
   const str = prompt("enter some numbers, like this", "1,2,3,3,5,9");
   
